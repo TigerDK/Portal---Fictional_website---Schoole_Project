@@ -18,7 +18,7 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent sort */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     text-align: center;
 }
@@ -33,30 +33,48 @@ header .logo {
 main {
     padding: 2rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent baggrund */
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     max-width: 800px;
     margin: 2rem auto;
+    width: 90%; /* Adjust width for smaller screens */
 }
 
-.about h1 {
+/* Welcome Section */
+.welcome h1 {
     font-size: 2rem;
-    color: #ff9e00; /* Orange som matcher Portal */
+    color: #ff9e00; /* Portal-inspired orange */
 }
 
-.about p {
+.welcome p {
     margin: 1rem 0;
     font-size: 1.2rem;
 }
 
-.links h2 {
+/* About Game Section */
+.about-game h2 {
     margin-top: 2rem;
     font-size: 1.8rem;
-    color: #00aaff; /* Blå som matcher Portal */
+    color: #00aaff; /* Portal-inspired blue */
 }
 
-.links p {
+.about-game p {
     margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Play Now Section */
+.play-now h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #00aaff;
+}
+
+.play-now p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 /* Buttons */
@@ -69,7 +87,7 @@ main {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn:hover {
@@ -83,4 +101,64 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design? */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .welcome h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome p, .about-game p, .play-now p {
+        font-size: 1rem;
+    }
+
+    .about-game h2, .play-now h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1rem;
+    }
+
+    .welcome h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-game h2, .play-now h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
 }
